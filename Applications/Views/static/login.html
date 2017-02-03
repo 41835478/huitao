@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>惠购-登录</title>
+    <link rel="shortcut icon" href="public/img/favicon.ico" />
+    <script type="text/javascript" src="public/js/jquery-1.12.3.js"></script>
+    <script src="public/js/config.js"></script>
+    <style type="text/css">
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .content {
+        position: fixed;
+        left: 50%;
+        top: 0%;
+        width: 30%;
+        background-color: #d1d1d1;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        animation: my 0.2s linear;
+        animation-fill-mode: forwards;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #666;
+    }
+
+    @keyframes my {
+        0% {
+            top: 0%;
+            /*left: 0%;*/
+        }
+        100% {
+            top: 40%;
+            /*left: 50%;*/
+        }
+    }
+
+    .content div {
+        margin: 20px 0;
+    }
+
+    .content input {
+        height: 26px;
+        font-size: 14px;
+        width: 50%;
+        border: solid 1px #aba9a9;
+    }
+
+    .content button {
+        margin-bottom: 10%;
+        background-color: #007aff;
+        color: #fff;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        padding: 2% 9%;
+        font-size: 14px;
+    }
+
+    .userName {
+        padding-top: 10%;
+    }
+
+    .content span {
+        padding-right: 5px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="userName">
+            <span>账号:</span>
+            <input type="text" name="username" />
+        </div>
+        <div class="password">
+            <span>密码:</span>
+            <input type="password" name="password"/>
+        </div>
+        <button class="login">登录</button>
+    </div>
+</body>
+<script type="text/javascript">
+$("body").on('click', '.login', function() {
+    if ($("[name='username']").val() != '') {
+        if ($("[name='password']").val() != '') {
+            var mainurl=getUrl();
+            var fun="/HtUser/dologin";
+            var tourl=mainurl+fun;
+            var postdata={
+                'username':$("[name='username']").val(),
+                'password':$("[name='password']").val()
+            };
+            $.ajax({
+                type:"post",
+                data:postdata,
+                url:tourl,
+                success:function(res){
+                   console.log(res);
+                    //json字符串转换为json对象
+                    var json =JSON.parse(res);
+                    if(json.status=='1'){
+                        alert(json.msg);
+                        location.href = 'userinfo.html';
+                    }
+                    else{
+                        alert(json.msg);
+                        $("[name='username']").val('');
+                        $("[name='password']").val('');
+                    }
+                }
+            });
+        } else {
+            alert('密码不能为空');
+        }
+    } else {
+        alert('账号不能为空');
+    }
+})
+</script>
+
+</html>

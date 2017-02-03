@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../font/glyphicons-halflings-regular.eot');
+    src: url('../font/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../font/glyphicons-halflings-regular.woff') format('woff'), url('../font/glyphicons-halflings-regular.ttf') format('truetype'), url('../font/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+.huitao{
+    background: rgb(248, 153, 78);
+    color:white;
+    font-family: "Times New Roman",Georgia,Serif;
+}
+#left li.target{
+    background: rgb(33,45,64);
+}
+#top li.target{
+    background: rgb(33,45,64);
+}
+#left{
+    width: 150px;
+    height: 1000px;
+    position: fixed;
+    background: rgb(39,54,72) ;
+    float: left;
+
+}
+#left_1{
+    width: 150px;
+    height: 1000px;
+    float: left;
+    margin-right: 5px;
+}
+#top{
+    display: none;
+    height: 50px;
+    background: rgb(39,54,72);
+    margin-bottom: 10px;
+}
+#left li{
+    background: rgb(39,54,72);
+    border: 0px;
+    height: 70px;
+    font-size: 15px;
+    line-height: 50px;
+    text-align: center;
+    cursor:pointer;
+    padding-top: 5px;
+
+}
+#left li a{
+    padding-top: 7px;
+    display: inline-block;
+    color: rgb(225,225,225);
+    text-decoration: none;
+    cursor: pointer;
+    font-family:"Times New Roman",Georgia,Serif; ;
+    line-height: 30px;
+    text-align: center;
+}
+#left img{
+    width: 150px;
+    height: 72px;
+}
+#top img{
+    float: left;
+    width: 150px;
+    height: 50px;
+}
+#top ul,#top li{
+    font-size: 0;
+    height: 50px;
+    display: inline-block;
+    background: rgb(39,54,72);
+    border: 0px;
+    color: rgb(225,225,225);
+    line-height: 30px;
+    text-align: center;
+    cursor:pointer;
+}
+#top  a{
+    /*解决display:inline-block时有间距的问题。*/
+    font-size: 15px;
+    color: rgb(225,225,225);
+    text-decoration: none;
+    cursor: pointer;
+    font-family:"Times New Roman",Georgia,Serif;
+
+}
+#left li:hover{
+    background: rgb(33,45,64);
+}
+#top li:hover{
+    background: rgb(33,45,64);
+}
+.bottomnav{
+    position:fixed; bottom: 0;right: 5px;
+}
+.list-group span{
+    font-family: "Glyphicons Halflings";
+    font-size: 20px;
+    display: block;
+    color: rgb(248,128,68);
+}
+#tab  td{
+    color: #0e90d2;
+}
+#tab {
+    margin-bottom: 60px;
+}
+#do{
+     z-index: 20000;
+     position: fixed;
+     right: 460px;
+     bottom: 4px;
+ }
+#do input{
+    float: right;
+    margin-left: 2px;
+}
+@media screen and (max-width: 800px) {
+    #left {
+        display: none;
+    }
+    #left_1 {
+        display: none;
+    }
+    #top{
+        display: block;
+        width: 800px;
+    }
+    #do{
+        z-index: 20000;
+        position: fixed;
+        right: 5px;
+        bottom: 40px;
+    }
+
+
+}

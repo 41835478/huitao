@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="public/img/favicon.ico" />
+    <title>个人信息</title>
+    <link href="public/css/bootstrap.css" rel="stylesheet">
+    <link href="public/css/basic.css" rel="stylesheet">
+    <link href="public/css/userinfo.css" rel="stylesheet">
+    <script src="public/js/config.js"></script>
+</head>
+<body style="position: relative">
+<div id="updateuser">
+        <div id="mainupdate">
+            <h1>修改个人信息</h1>
+            <label>名称　　　　　:　</label><input type="text"><br/>
+            <label>手机号　　　　:　</label><input type="text"><br/>
+            <label>是否更改密码　:　</label><input type="checkbox"><br/>
+            <label>原密码　　　　:　</label><input type="text"><br/>
+            <label>新密码　　　　:　</label><input type="text"><br/>
+            <label>确认新密码　　:　</label><input type="text"><br/>
+            <div class="opreate">
+                <input  class="btn bt1" type="button" value="取消">
+                <input  class="btn btn-primary bt2"type="button" value="确定">
+            </div>
+
+        </div>
+</div>
+<div id="top">
+    <img src="public/img/logo.png">
+    <ul class="list-group">
+        <li class="list-group-item"><a href="userinfo.html">个人中心</a></li>
+        <li class="list-group-item"><a href="users.html">APP用户</a></li>
+        <li class="list-group-item "><a href="backuser.html">后台用户</a></li>
+        <li class="list-group-item"><a href="goods.html">商品</a></li>
+        <li class="list-group-item "><a href="tocash.html">提现</a></li>
+        <li class="list-group-item target"><a href="power.html">权限</a></li>
+        <li class="list-group-item"><a href="#">财务</a></li>
+        <li class="list-group-item"><a href="#">招商</a></li>
+        <li class="list-group-item"><a href="#">推广</a></li>
+    </ul>
+</div>
+<div id="left" >
+    <div id="home"><img src="public/img/logo.png"></div>
+    <ul class="list-group">
+        <li class="list-group-item target"><a href="#"><span class="glyphicon glyphicon-home"></span>个人中心</a></li>
+        <li id="app" class="list-group-item "><a href="users.html"><span class="glyphicon glyphicon-user"></span> APP用户</a></li>
+        <li id="back" class="list-group-item disabled"><a href="backuser.html"><span class="glyphicon glyphicon-lock"></span>后台用户</a></li>
+        <li id="shangpin" class="list-group-item "><a href="goods.html"><span class="glyphicon glyphicon-th-list"></span>商品信息</a></li>
+        <li id="tixian" class="list-group-item "><a href="tocash.html"><span class="glyphicon  glyphicon-euro"></span>提现管理</a></li>
+        <li id="quanxian" class="list-group-item "><a href="power.html"><span class="glyphicon glyphicon-wrench"></span>权限管理</a></li>
+        <li id="caiwu" class="list-group-item "><a href="#"><span class="glyphicon glyphicon-usd"></span>财务</a></li>
+        <li id="zhaoshang" class="list-group-item"><a href="#"><span class="glyphicon glyphicon-globe"></span>招商</a></li>
+        <li id="tuiguang" class="list-group-item"><a href="#"><span class="glyphicon glyphicon-new-window"></span>推广</a></li>
+
+    </ul>
+</div>
+<div id="right">
+<div id="right_top"><p>个人信息</p></div>
+<p id="basictitle">基本信息</p>
+    <div id="basicinfo">
+        <ul class="list-group">
+            <li class="list-group-item">ID　　　　　　:　<b id="id"></b></li>
+            <li class="list-group-item">名称　　　　　:　<b id="username"></b></li>
+            <li class="list-group-item">姓名　　　　　:　<b id="name"></b></li>
+            <li class="list-group-item">电话　　　　　:　<b id="phone"></b></li>
+        </ul>
+    </div>
+    <p id="othertitle">其他信息</p>
+    <div id="otherinfo">
+        <ul class="list-group">
+            <li class="list-group-item">身份　　　　　:　<b id="role"></b></li>
+            <li class="list-group-item">余额　　　　　:　<b id="money"></b></li>
+            <li class="list-group-item">创建时间　　　:　<b id="createtime"></b></li>
+            <li class="list-group-item">状态　　　　　:　<b id="status"></b></li>
+            <li class="list-group-item">最近操作时间　:　<b id="optime"></b></li>
+        </ul>
+        <input id="exit" type="button" class="btn btn-success mybtn" value="退出登录">
+        <input id="update" type="button" class="btn btn-primary mybtn" value="修改">
+    </div>
+</div>
+
+<!--加载js-->
+<script src="public/js/jquery-1.12.3.js"></script>
+<script src="public/js/bootstrap.js"></script>
+<script src="public/js/usersinfo.js"></script>
+</body>
+</html>

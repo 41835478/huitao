@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="public/img/favicon.ico" />
+    <title>商品信息</title>
+    <link href="public/css/bootstrap.css" rel="stylesheet">
+    <link href="public/css/basic.css" rel="stylesheet">
+    <link href="public/css/goods.css" rel="stylesheet">
+    <script src="public/js/config.js"></script>
+</head>
+<body style="position: relative">
+<div id="updateuser">
+    <div id="mainupdate">
+        <h1>添加商品信息</h1>
+        <label>淘宝ID　　　　:　</label><input  name="num_iid" type="text" placeholder="必填"  class="infoma">*<br/>
+        <label>平台　　　　　:　　　&nbsp;&nbsp;</label>
+        <select style="width: 170px" name="store_type">
+        <option value ="天猫">天猫</option>
+        <option value ="淘宝">淘宝</option>
+        </select><br/>
+        <label>详情链接　　　:　</label><input  name="item_url" type="text" placeholder="必填" class="infoma">*<br/>
+        <label>宝贝名称　　　:　</label><input  name="title"　type="text" class="infoma"><br/>
+        <label>月销量　　　　:　</label><input  name="volume"　type="text" class="infoma"><br/>
+        <label>价格　　　　　:　</label><input  name="price"　type="text" class="infoma"><br/>
+        <label>佣金比　　　　:　</label><input  name="rating"　type="text" placeholder="必填" class="infoma">*<br/>
+        <div class="opreate">
+            <input  class="btn btcancle" type="button" value="取消">
+            <input  class="btn btn-primary btconfirm"type="button" value="确定">
+        </div>
+
+    </div>
+</div>
+<div id="top">
+    <img src="public/img/logo.png">
+    <ul class="list-group">
+        <li class="list-group-item"><a href="userinfo.html">个人中心</a></li>
+        <li class="list-group-item"><a href="users.html">APP用户</a></li>
+        <li class="list-group-item "><a href="backuser.html">后台用户</a></li>
+        <li class="list-group-item target"><a href="#">商品</a></li>
+        <li class="list-group-item "><a href="tocash.html">提现</a></li>
+        <li class="list-group-item"><a href="power.html">权限</a></li>
+        <li class="list-group-item"><a href="#">财务</a></li>
+        <li class="list-group-item"><a href="#">招商</a></li>
+        <li class="list-group-item"><a href="#">推广</a></li>
+    </ul>
+</div>
+<div id="left_1"></div>
+<div id="left" >
+    <div id="home"><img src="public/img/logo.png"></div>
+    <ul class="list-group">
+        <li class="list-group-item "><a href="userinfo.html"><span class="glyphicon glyphicon-home"></span>个人中心</a></li>
+        <li id="app" class="list-group-item "><a href="users.html"><span class="glyphicon glyphicon-user"></span> APP用户</a></li>
+        <li id="back" class="list-group-item disabled"><a href="backuser.html"><span class="glyphicon glyphicon-lock"></span>后台用户</a></li>
+        <li id="shangpin" class="list-group-item  target"><a href="#"><span class="glyphicon glyphicon-th-list"></span>商品信息</a></li>
+        <li id="tixian" class="list-group-item "><a href="tocash.html"><span class="glyphicon  glyphicon-euro"></span>提现管理</a></li>
+        <li id="quanxian" class="list-group-item"><a href="power.html"><span class="glyphicon glyphicon-wrench"></span>权限管理</a></li>
+        <li id="caiwu" class="list-group-item "><a href="#"><span class="glyphicon glyphicon-usd"></span>财务</a></li>
+        <li id="zhaoshang" class="list-group-item"><a href="#"><span class="glyphicon glyphicon-globe"></span>招商</a></li>
+        <li id="tuiguang" class="list-group-item"><a href="#"><span class="glyphicon glyphicon-new-window"></span>推广</a></li>
+
+    </ul>
+</div>
+    <label>每页显示:</label><select id="selecnum"><option>50</option><option disabled>100</option></select>
+    <input type="button" class="btn btn-primary" value="重新载入表格" id="btn1">
+    <label>共<mark id="sumnum"></mark>条记录。</label>
+    <div class="table-responsive">
+        <table class="table  table-bordered table-hover" id="tab">
+            <thead >
+            <tr class="huitao">
+                <th>商品 ID</th>
+                <th>淘宝 ID</th>
+                <th>平台</th>
+                <th>商品详情</th>
+                <th>宝贝名称</th>
+                <th>月销量</th>
+                <th>价格</th>
+                <th>佣金比%</th>
+                <th>创建日期</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <nav class="bottomnav">
+
+        <ul class="pagination" style="float:right;">
+            <li class="fristpage"><a href="#">共<span id="sum">20000</span>页</a></li>
+            <li class="fristpage"><a href="#">首页</a></li>
+            <li class="prepage" disabled="true"><a href="#">上一页</a></li>
+            <li class="order"><a href="#">跳至</a></li>
+            <li ><a href="#" style="padding: 0;"><input type="text" style="width: 60px;height: 32px;text-align: center" placeholder="页码" id="goto"> </a></li>
+            <li class="nextpage"><a href="#">下一页</a></li>
+            <li class="lastpage"><a href="#">末页</a></li>
+        </ul>
+    </nav>
+<div id="do" style="width: 400px;height: 50px">
+    <input type="button" class="btn btn-success  addgoods" value="添加商品">
+    <input type="button" class="btn btn-primary serach" value="查找商品">
+    <input type="text" placeholder="请输入ID" style="width: 100px" class="form-control" id="goodid">
+</div>
+
+<!--加载js-->
+<script src="public/js/jquery-3.1.1.js"></script>
+<script src="public/js/bootstrap.js"></script>
+<script src="public/js/goods.js"></script>
+
+</body>
+</html>

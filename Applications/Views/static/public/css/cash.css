@@ -1,0 +1,40 @@
+#mask{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    z-index: 99999;
+}
+#maincontext{
+    border-radius: 12px;
+    font-family: "Times New Roman", Georgia, Serif;
+    background: white;
+    width: 500px;
+    height: 550px;
+    margin: 10% auto;
+}
+#maincontext h1{
+    border-top-right-radius: 12px ;
+    border-top-left-radius: 12px ;
+    height: 45px;
+    line-height: 45px;
+    font-size: 30px;
+    text-align: center;
+    margin: 5px auto;
+    background: rgb(248,128,68);
+    margin-bottom: 0;
+}
+#maincontext ul{
+    margin-bottom: 10px;
+}
+#maincontext .sure{
+    margin-right: 8px;
+    float: right;
+}
+#maincontext label{
+    margin: 0;
+    padding: 0;
+}
+
+

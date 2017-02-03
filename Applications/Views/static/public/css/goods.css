@@ -1,0 +1,41 @@
+#updateuser{
+    z-index: 99999;
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0,0,0,0.6);
+}
+#mainupdate{
+    border-radius: 12px 12px;
+    font-family: "Times New Roman", Georgia, Serif;
+     background: rgba(246, 246, 246, 1);
+     color: #141414;
+     z-index: 1001;
+     width:500px;
+     height:310px;
+     margin: 15% auto;
+     box-shadow: 10px 10px 5px rgba(4, 4, 4, 0.06);
+ }
+#mainupdate h1{
+    border-top-right-radius: 12px ;
+    border-top-left-radius: 12px ;
+    height: 40px;
+    line-height: 20px;
+    background: rgb(248,128,68);
+    padding-top: 10px;
+    text-align: center;
+    margin: 10px auto;
+     font-size: 20px;
+}
+#mainupdate label,#mainupdate input{
+    margin-left: 40px;
+    font-size: 15px;
+}
+#mainupdate .opreate{
+    text-align: center;
+   margin: 10px auto;
+}
+#mainupdate .bt1{
+    margin-right: 80px;
+}

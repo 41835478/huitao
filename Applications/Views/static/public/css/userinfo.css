@@ -1,0 +1,96 @@
+#left{
+    position: relative;
+    float: left;
+}
+#right{
+    margin-left: 30px;
+    border: 2px dotted #e6e6e6;
+    float: left;
+    min-width: 600px;
+    height: 705px;
+}
+.mybtn{
+    float: right;
+    margin-right: 20px;
+}
+#right_top{
+    color: rgb(248, 153, 78);
+    font-style:inherit;
+    border-left: 5px solid rgb(248, 153, 78);
+    line-height: 71px;
+    font-size: 30px;
+    height: 71px;
+    background: rgb(245,245,245);
+}
+.myitem{
+    display: inline-block;
+    width: 150px;
+}
+.maohao{
+    float: left;
+
+}
+#basictitle,#othertitle{
+    margin-top:10px;;
+    font-size: 25px;
+    text-align: center;
+}
+
+#updateuser{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+    background: rgba(0,0,0,0.6);
+}
+#mainupdate{
+    font-family: "Times New Roman", Georgia, Serif;
+     background: rgba(246, 246, 246, 1);
+     color: #141414;
+     z-index: 1001;
+     width:500px;
+     height:300px;
+     margin: 15% auto;
+ }
+#mainupdate h1{
+    height: 40px;
+    line-height: 20px;
+    background: rgb(248,128,68);
+    padding-top: 10px;
+    text-align: center;
+    margin: 10px auto;
+     font-size: 20px;
+}
+#mainupdate label,#mainupdate input{
+    margin-left: 20px;
+    font-size: 15px;
+}
+#mainupdate .opreate{
+    text-align: center;
+   margin: 10px auto;
+}
+#mainupdate .bt1{
+    margin-right: 80px;
+}
+
+#right .table p{
+    font-size: 12px;
+    height: 25px;
+    line-height: 25px;
+    width: 130px;
+    text-align: center;
+    margin-top: 7px;
+    margin-bottom: 0;
+    border-radius: 5px;
+}
+#right .table section input{
+    font-size: 30px;
+}
+#right .table td.power{
+    line-height: 300px;
+}
+#right .btn{
+  float: right;
+    margin-right: 20px;
+}
