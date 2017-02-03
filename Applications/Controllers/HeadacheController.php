@@ -6,7 +6,6 @@ class HeadacheController {
         if(!empty($data['imei']) && !empty($data['callback_url'])) {
             //检测是否已经激活过了
             if(M('did_log') ->where(['imei' => ['=', $data['imei']]])->select('single'))
-
                 $this->return_json(false,'已经激活过了');
             //如果这个用户已经存在记录了 并且没有回调过 就不需要在添加了
             $query = M('tracking')->where(['imei' => ['=', $data['imei']], 'status' => ['=', 1]],['AND'])->select('single');
@@ -28,8 +27,7 @@ class HeadacheController {
         //状态为1  为未匹配到的用户
         $jishu = 10;
         //匹配imei  匹配到状态改为3
-        $queryImei = M('tracking')->field('imei')->where(['imei' => ['=', $imei['imei']],'status' => ['=', 1]],['AND'])->select('single');
-        if(!empty($queryImei)) {
+        if(!empty(M('tracking')->field('imei')->where(['imei' => ['=', $imei['imei']],'status' => ['=', 1]],['AND'])->select('single'))) {
             M('tracking')->where(['imei' => ['=', $imei['imei']]])->save(['status' => 3, 'type' => 1, 'uid' => $imei['uid']]);
             //先获取到之前匹配到的数据总量 基数为10 扣除80%
             $data = M('tracking')->field('imei,callback_url')->where(['status' => ['=',3]])->select();
